@@ -4,7 +4,8 @@ import { galleryItems } from './gallery-items';
 
 console.log(galleryItems);
 
-import Simplelightbox from 'simpleLightbox';
+// import Simplelightbox from 'simpleLightbox';
+import SimpleLightbox from "simplelightbox"
 
 import "simplelightbox/dist/simple-lightbox.min.css";
 
