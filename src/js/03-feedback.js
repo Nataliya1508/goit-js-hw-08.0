@@ -21,6 +21,11 @@ function onFormSubmit(evt) {
     const emailEl = formEl.email.value;
     const messageEl = formEl.message.value;
 
+     if (emailEl === '' || messageEl === '') {
+    alert('Все поля должны быть заполнены');
+    return;
+  }
+
     console.log('email:', emailEl);
     console.log('message:', messageEl);
 
