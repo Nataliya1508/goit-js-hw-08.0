@@ -12,8 +12,14 @@ formEl.addEventListener('submit', onFormSubmit);
 function onFormInput(evt) {
     evt.preventDefault();
     formData[evt.target.name] = evt.target.value;
+
+//      if (evt.target.value === '') {
+//     alert('Все поля должны быть заполнены');
+//     return;
+//   }
+
     localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(formData));
-    console.log(formData);
+    // console.log(formData);
 }
 
 function onFormSubmit(evt) {
@@ -41,6 +47,11 @@ function updateForm() {
 return
     }
     const savedForm = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
-      formEl.elements.email.value = savedForm.email;
-      formEl.elements.message.value = savedForm.message;
+    
+    
+      if (savedForm) {
+        formEl.elements.email.value = savedForm.email || "";
+        formEl.elements.message.value = savedForm.message || "";
+     console.log(savedForm);
+    };
 }
