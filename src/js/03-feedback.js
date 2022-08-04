@@ -33,8 +33,14 @@ function onFormSubmit(evt) {
     return;
   }
 
-    console.log('email:', emailEl);
-    console.log('message:', messageEl);
+    // console.log('email:', emailEl);
+    // console.log('message:', messageEl);
+
+     const formDataValue = {
+    emailEl,
+    messageEl,
+  };
+  console.log(formDataValue);
 
     formEl.reset();
     localStorage.removeItem(LOCALSTORAGE_KEY);
